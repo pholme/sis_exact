@@ -28,7 +28,7 @@ void get_automorphisms (AUTOCLASS *au) {
 	int i, j, me, you;
 	igraph_bool_t iso;
 
-	g.autoclass = (int *) malloc(g.ns * sizeof(int));
+	g.autoclass = malloc(g.ns * sizeof(int));
 
 	for (me = 0; me < g.ns; me++) g.autoclass[me] = -1;
 
@@ -51,9 +51,9 @@ void get_automorphisms (AUTOCLASS *au) {
 	// construct the nodes of the state network, one per automorphic equivalence class
 
 	for (i = 0; i < g.nauto; i++) {
-		au[i].v = (int *) malloc(STATE * sizeof(int));
+		au[i].v = malloc(STATE * sizeof(int));
 		au[i].v[N] = 0;
-		au[i].p = (fmpz_poly_t *) malloc((g.nauto + 1) * sizeof(fmpz_poly_t));
+		au[i].p = malloc((g.nauto + 1) * sizeof(fmpz_poly_t));
 		for (j = 0; j <= g.nauto; j++) fmpz_poly_init(au[i].p[j]);
 	}
 	for (me = 1; me < g.ns; me++) au[g.autoclass[me]].v[N]++;
@@ -74,7 +74,7 @@ void set_up_equations (AUTOCLASS *au) {
 	igraph_vs_t vs_me, vs_you;
 	igraph_vit_t me, you;
 
-	nb = (int *) malloc(g.nauto * sizeof(int));
+	nb = malloc(g.nauto * sizeof(int));
 
 	igraph_vs_all(&vs_me);
 
@@ -262,7 +262,7 @@ int main (int argc, char *argv[]) {
 
 	g.n = igraph_vcount(&g.g);
 
-	au = (AUTOCLASS *) malloc(g.ns * sizeof(AUTOCLASS));
+	au = malloc(g.ns * sizeof(AUTOCLASS));
 
 	get_automorphisms(au);
 	set_up_equations(au);
