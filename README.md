@@ -2,7 +2,7 @@ This is code to calculate the expected time to extinction from all possible conf
 
 The code is compiled by make (it assumes a directory o/ where it can put the object files). You'd probably have to edit the Makefile to reflect your environment.
 
-The code is run as:
+You can run the program like:
 
 `./extime 3 0 1 1 2`
 
