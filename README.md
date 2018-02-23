@@ -20,4 +20,4 @@ The output is:
 
 Before the comma, there is a list of equivalent configurations. After the comma, there is a list of the expression for the _x_-values of all configurations.
 
-For more info, see the accompanying paper: Holme, Tupikina, Extinction in the susceptible-infected-susceptible model on networks: An exact computational approach.
+For more info, see the accompanying paper: Holme & Tupikina, Epidemic extinction in networks: Insights from the 12,111 smallest graphs.
