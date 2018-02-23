@@ -58,7 +58,7 @@ void get_automorphisms (AUTOCLASS *au) {
 	}
 	for (me = 1; me < g.ns; me++) au[g.autoclass[me]].v[N]++;
 	for (i = 0; i < g.nauto; i++) {
-		au[i].v = (int *) realloc(au[i].v, (au[i].v[N] + STATE) * sizeof(int));
+		au[i].v = realloc(au[i].v, (au[i].v[N] + STATE) * sizeof(int));
 		au[i].v[N] = 0;
 	}
 	for (me = 1; me < g.ns; me++) {
