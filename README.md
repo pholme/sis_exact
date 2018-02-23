@@ -18,6 +18,6 @@ The output is:
 7, (4*x^4+20*x^3+57*x^2+62*x+22)/(16*x^2+28*x+12)
 ```
 
-Before the comma, there is a list of equivalent configurations. After the comma, there is a list of the expression for the _x_-values of all configurations.
+Before the comma, there is a list of equivalent configurations. After the comma is the expression for the _x_-values of the corresponding configurations.
 
 For more info, see the accompanying paper: Holme & Tupikina, Epidemic extinction in networks: Insights from the 12,110 smallest graphs.
