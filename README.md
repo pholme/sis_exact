@@ -4,18 +4,18 @@ The code is compiled by make (it assumes a directory o/ where it can put the obj
 
 The code is run as:
 
-./extime 3 0 1 1 2
+`./extime 3 0 1 1 2`
 
-Where the 3 is the number of nodes. The rest is a list of links to define the graph, the node indices are assumed to range from 0 to N-1.
+Where the 3 is the number of nodes. The rest is a list of links to define the graph, the node indices are assumed to range from 0 to _N_ - 1.
 
 The output is:
 
-1 4, (4*x^4+16*x^3+35*x^2+34*x+12)/(16*x^2+28*x+12)
+`1 4, (4*x^4+16*x^3+35*x^2+34*x+12)/(16*x^2+28*x+12)
 2, (2*x^3+7*x^2+14*x+6)/(8*x+6)
 3 6, (4*x^3+16*x^2+35*x+18)/(16*x+12)
 5, (4*x^4+20*x^3+53*x^2+52*x+18)/(16*x^2+28*x+12)
-7, (4*x^4+20*x^3+57*x^2+62*x+22)/(16*x^2+28*x+12)
+7, (4*x^4+20*x^3+57*x^2+62*x+22)/(16*x^2+28*x+12)`
 
-Before the comma, there is a list of equivalent configurations. After the comma, there is a list of the expression for all x_s.
+Before the comma, there is a list of equivalent configurations. After the comma, there is a list of the expression for all _x_.
 
 For more info, see the accompanying paper: Holme, Tupikina, Extinction in the susceptible-infected-susceptible model on networks: An exact computational approach.
