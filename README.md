@@ -6,7 +6,7 @@ You can run the program like:
 
 `./extime 3 0 1 1 2`
 
-Where the 3 is the number of nodes. The rest is a list of links to define the graph, the node indices are assumed to range from 0 to _N_ - 1.
+Where the first argument, 3, is the number of nodes. The rest is a list of links to define the graph, the node indices are assumed to range from 0 to _N_ - 1.
 
 The output is:
 
