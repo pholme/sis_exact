@@ -281,7 +281,7 @@ int main (int argc, char *argv[]) {
 		fmpz_poly_print_pretty(au[i].p[g.nauto], "x");
 		if (!j) {
 			printf(")/");
-			j = (fmpz_poly_degree(au[i].p[i]) > 1);
+			j = (fmpz_poly_degree(au[i].p[i]) > 0);
 			if (j) printf("(");
 			fmpz_poly_print_pretty(au[i].p[i], "x");
 			if (j) printf(")");
