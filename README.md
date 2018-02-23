@@ -1,4 +1,4 @@
-This code calculates the expected time to extinction in the SIS model from all possible configurations of susceptible and infectious and any network. It uses graph isomorphism to reduce the computational time if there are symmetries in the underlying network. The code requires the FLINT library http://www.flintlib.org/ for polynomial algebra and igraph http://igraph.org/c/ for the graph isomorphism routine.
+This code calculates the expected time to extinction in the (standard, Markovian) SIS model from all possible configurations of susceptible and infectious and any network. It uses graph isomorphism to reduce the computational time if there are symmetries in the underlying network. The code requires the FLINT library http://www.flintlib.org/ for polynomial algebra and igraph http://igraph.org/c/ for the graph isomorphism routine.
 
 The code is compiled by make (it assumes a directory o/ where it can put the object files). You'd probably have to edit the Makefile to reflect your environment.
 
@@ -18,6 +18,6 @@ The output is:
 7, (4*x^4+20*x^3+57*x^2+62*x+22)/(16*x^2+28*x+12)
 ```
 
-Before the comma, there is a list of equivalent configurations. After the comma is the expression for the _x_-values of the corresponding configurations.
+Before the comma, there is a list of equivalent configurations. After the comma is the expression for the times to extinction of the corresponding configurations. _x_ is the transmission rate (beta), we assume the recovery rate is one.
 
 For more info, see the accompanying paper: Holme & Tupikina, Epidemic extinction in networks: Insights from the 12,110 smallest graphs.
