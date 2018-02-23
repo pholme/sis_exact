@@ -128,9 +128,8 @@ void set_up_equations (AUTOCLASS *au) {
 			if (nb[j] < 0) { // if S->I
 				fmpz_poly_set_coeff_si(au[i].p[j], 1, -nb[j]);
 			} else { // if I->S
-				if (nb[j] > 0) {
-					fmpz_poly_set_coeff_si(au[i].p[j], 0, nb[j]);
-				} else fmpz_poly_zero(au[i].p[j]); // if no change
+				if (nb[j] > 0) fmpz_poly_set_coeff_si(au[i].p[j], 0, nb[j]);
+				else fmpz_poly_zero(au[i].p[j]); // if no change
 			}
 		}
 		fmpz_poly_set(au[i].p[i], g.a); // the self contribution
@@ -186,7 +185,7 @@ void solve_equations (AUTOCLASS *au) {
 				fmpz_poly_sub(au[j].p[k], g.b, g.a);
 			}
 			fmpz_poly_zero(au[j].p[i]);
-			fmpz_poly_clear(au[j].p[i]); // NEW
+			fmpz_poly_clear(au[j].p[i]);
 
 			// simplify
 			fmpz_poly_zero(g.a);
@@ -217,8 +216,7 @@ void solve_equations (AUTOCLASS *au) {
 					else fmpz_poly_gcd(g.c, g.c, au[j].p[k]);
 				}
 			}
-			fmpz_poly_zero(au[j].p[i]);
-			fmpz_poly_clear(au[j].p[i]); // NEW
+			fmpz_poly_clear(au[j].p[i]);
 
 			// simplify
 			for (k = j; k <= g.nauto; k++) if (k != i)
