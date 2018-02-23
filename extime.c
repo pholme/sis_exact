@@ -216,7 +216,7 @@ void solve_equations (AUTOCLASS *au) {
 					else fmpz_poly_gcd(g.c, g.c, au[j].p[k]);
 				}
 			}
-			fmpz_poly_clear(au[j].p[i]);
+			fmpz_poly_zero(au[j].p[i]);
 
 			// simplify
 			for (k = j; k <= g.nauto; k++) if (k != i)
