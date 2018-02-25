@@ -7,9 +7,9 @@
 #include <igraph.h>
 
 #define N 0
-#define NINF 1
-#define SMALL 2
-#define LARGE 3
+#define NINF 1  // this is not needed for this version of the program, but is an example of how one can store info about an equivalence class
+#define SMALL 2 // .. same for this ..
+#define LARGE 3 // and this (so you can delete these three and set STATE to 1)
 #define STATE 4
 
 #define INFECTIOUS(x,y) ((x) & (1 << (y))) // if node y is I in state x
