@@ -18,6 +18,6 @@ The output is:
 7, (4*x^4+20*x^3+57*x^2+62*x+22)/(16*x^2+28*x+12)
 ```
 
-Before the comma, there is a list of equivalent configurations. After the comma is the expression for the times to extinction of the corresponding configurations. _x_ is the transmission rate (beta), we assume the recovery rate is one.
+Before the comma, there is a list of equivalent configurations (encoded as a binary number, so 3 = 011 means node 0 and 1 are infectious and 2 is susceptible). After the comma is the expression for the times to extinction of the corresponding configurations. _x_ is the transmission rate (beta), we assume the recovery rate is one.
 
 For more info, see the accompanying paper: Holme & Tupikina, Epidemic extinction in networks: Insights from the 12,110 smallest graphs.
